@@ -65,7 +65,7 @@ function addDataToCalendar()
     {
       var newEvent = eventCal.createEvent(titleData, startTimeData, endTimeData);
       newEvent.setDescription(descriptionData);
-      setEventColor(newEvent,colorData)
+      newEvent.setColor(setEventColor(newEvent,colorData));
       addDataToBackup(lineOfData);
       dataSheet.deleteRow(2 + numError);
     }
@@ -108,52 +108,52 @@ function setEventColor(event,color)
 {
   if(color == "1" || color.toLowerCase() == "light blue")
   {
-    event.setColor("1");
+    return 1;
   }
   else if(color == "2" || color.toLowerCase() == "light green")
   {
-    event.setColor("2");
+    return 2;
   }
   else if(color == "3" || color.toLowerCase() == "purple")
   {
-    event.setColor("3");
+    return 3;
   }
   else if(color == "4" || color.toLowerCase() == "light red")
   {
-    event.setColor == "4";
+    return 4;
   }
   else if(color == "5" || color.toLowerCase() == "yellow")
   {
-    event.setColor == "5";
+    return 5;
   }
   else if(color == "6" || color.toLowerCase() == "orange")
   {
-    event.setColor == "6";
+    return 6;
   }
   else if(color == "7" || color.toLowerCase() == "cyan")
   {
-    event.setColor == "7";
+    return 7;
   }
   else if(color == "8" || color.toLowerCase() == "gray")
   {
-    event.setColor == "8";
+    return 8;
   }
   else if(color == "9" || color.toLowerCase() == "blue")
   {
-    event.setColor == "9";
+    return 9;
   }
   else if(color == "10" || color.toLowerCase() == "green")
   {
-    event.setColor == "10";
+    return 10;
   }
   else if(color == "11" || color.toLowerCase() == "red")
   {
-    event.setColor == "11";
+    return 11;
   }
   else
   {
     /** If no color is found set to pale blue as default */
-    event.setColor == "1";
+    return 1;
   }
 
 }
@@ -165,3 +165,5 @@ function onOpen()
   .addItem("Sync Data to Calendar", "addDataToCalendar").addItem("Run StartUp/Load Update", "startUp")
   .addToUi();
 }
+
+
