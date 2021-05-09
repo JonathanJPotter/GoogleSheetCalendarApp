@@ -14,6 +14,6 @@ How to use
 11. Paste Calendar ID to spreadsheet under Sheet: settings cell: A2 (down at the bottom after running start script)
 12. Open data entry sheet
 13. Enter data row by row
-14. To sync: run "Sync data" under "sync to Calendar or addDataToCalendar f unction in apps script
+14. To sync: run "Sync data" under "Calendar Functions" or addDataToCalendar function in apps script
 
 
