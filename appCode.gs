@@ -86,7 +86,7 @@ function addDataToBackup(data)
     var backupSheet = spreadsheet.getSheetByName("Backup Data");
     var numColumn = backupSheet.getLastColumn();
     var numRow = backupSheet.getLastRow();
-
+    
     for(var x = 0; x < data.length; x++)
     {
       var cellData = data[x];
@@ -158,10 +158,10 @@ function setEventColor(event,color)
 
 }
 
-function onOpen()
+function onOpen() 
 {
   var ui = SpreadsheetApp.getUi();
-  ui.createMenu("Sync to Calendar")
-  .addItem("Sync Data", "addDataToCalendar").addItem("Start Script", "startUp")
+  ui.createMenu("Calendar Functions")
+  .addItem("Sync Data to Calendar", "addDataToCalendar").addItem("Run StartUp/Load Update", "startUp")
   .addToUi();
 }
